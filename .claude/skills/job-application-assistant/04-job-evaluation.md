@@ -60,7 +60,7 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
+**Strong match areas:** C#, .NET, business rules / decision logic implementation, [YOUR_OTHER_PRIMARY_SKILLS]
 **Moderate match areas:** [YOUR_SECONDARY_SKILLS]
 **Weak match areas:** [SKILLS_YOU_LACK]
 
@@ -74,7 +74,7 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
+**Strong:** Backend C#/.NET development of business rules in enterprise systems, [YOUR_DIRECT_EXPERIENCE_DOMAINS]
 **Moderate:** [YOUR_ADJACENT_EXPERIENCE]
 **Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
 

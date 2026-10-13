@@ -9,7 +9,7 @@ framework_version: 1.1.1
 
 ## Identity
 - **Name:** [YOUR_NAME]
-- **Location:** [YOUR_ADDRESS]
+- **Location:** [YOUR_ADDRESS], Ireland
 - **Phone:** [YOUR_PHONE]
 - **Email:** [YOUR_EMAIL]
 - **LinkedIn:** [YOUR_LINKEDIN_URL]
@@ -25,7 +25,7 @@ a hard no, not a gap to smooth over. -->
 
 | Language | Level | Notes |
 |----------|-------|-------|
-| [LANGUAGE] | [LEVEL, e.g. "Native" / "C2" / "B1/B2 (conversational)"] | [optional] |
+| English | Native | |
 
 ## Education
 
@@ -49,13 +49,13 @@ a hard no, not a gap to smooth over. -->
 
 ## Technical Skills
 
-### Programming & ML
-- **[LANGUAGE]** ([PROFICIENCY]): [FRAMEWORKS_AND_LIBRARIES]
-- [OTHER_SKILLS]
+### Programming
+- **C#** ([PROFICIENCY]): .NET [VERSIONS], [FRAMEWORKS_AND_LIBRARIES e.g. ASP.NET Core, Entity Framework, xUnit/NUnit]
+- [OTHER_SKILLS e.g. SQL Server, Azure, Git, CI/CD]
 
 ### Domain Expertise
-- [DOMAIN_1]
-- [DOMAIN_2]
+- Business rules: implementing and maintaining business/decision logic in C# ([RULES_ENGINE_OR_APPROACH, e.g. in-house rules engine, NRules, Microsoft RulesEngine, InRule, decision tables])
+- [BUSINESS_DOMAIN, e.g. insurance, lending, payroll, compliance]
 
 ### Software & Tools
 - [TOOL_LIST]

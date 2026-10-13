@@ -17,17 +17,17 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Identity
 - **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Location:** [YOUR_CITY], Ireland ([YOUR_COMMUTE_CONSTRAINTS], e.g. hybrid within commute range or remote within Ireland)
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
+  | English | Native |
   <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
   working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
   undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
   lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
   04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+- **CV language:** English (Irish/UK conventions: no photo, no date of birth or marital status)
 
 - **Status:** [YOUR_EMPLOYMENT_STATUS]
 - **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
@@ -46,9 +46,9 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
   - [KEY_ACHIEVEMENT]
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
+- **Primary:** C#, .NET, business rules implementation
 - **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
+- **Domain:** Business rules / decision logic in enterprise software ([YOUR_INDUSTRY], e.g. insurance, finance, payroll)
 - **Software:** [YOUR_TOOLS_AND_SOFTWARE]
 
 ### Certifications
@@ -78,12 +78,15 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Target Sectors
 <!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Financial services & fintech (Dublin IFSC and beyond): [EXAMPLE_COMPANIES]
+- Insurance & insurtech (rules-heavy: underwriting, rating, claims): [EXAMPLE_COMPANIES]
+- Enterprise / B2B SaaS on the Microsoft stack: [EXAMPLE_COMPANIES]
+<!-- Confirm or replace these - they're suggested from "C# business rules", not from your history. -->
 
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
 automatically from your Languages table above - don't duplicate them here. -->
+- Roles requiring relocation outside Ireland
 - [DEALBREAKER_1]
 - [DEALBREAKER_2]
 

@@ -1,6 +1,6 @@
 # Search Queries for Job Scraper
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
+<!-- Customized for: C#/.NET business-rules engineering, Ireland. Fill [YOUR_CITY] and the location filter. -->
 
 ## Installed portal CLIs (primary for `/scrape`)
 
@@ -12,69 +12,78 @@ The `site:` query templates in this file are the **WebSearch fallback** — for 
 
 ## Search Sites
 
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by `linkedin-search` CLI
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
+Primary (Irish market):
+- **irishjobs.ie** - Ireland's largest general job board
+- **linkedin.com/jobs** - LinkedIn job listings (filter: Ireland / [YOUR_CITY]); also covered by the `linkedin-search` CLI with `--location "Ireland"` or `--location "Dublin, County Dublin, Ireland"`
+- **jobs.ie** - another major Irish board
+- **ie.indeed.com** - Indeed Ireland
+
+The Danish portal CLIs shipped with the template are disabled (`enabled: false`). `linkedin-search` and `freehire-search` are country-agnostic and stay on. To get a real CLI for an Irish board instead of the WebSearch fallback, run `/add-portal`.
 
 Secondary (company career pages via Google):
 - Direct Google searches with `site:` filters for known target companies
 
 ## Query Categories
 
-Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
+Queries are grouped by priority. All queries are in English. Combine each query with location terms (Ireland, Dublin, Cork, Galway, Limerick, or "remote Ireland") where the site supports it.
 
-**Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
+**Organize by function, not job title.** The same work is posted under many titles (".NET Developer", "C# Software Engineer", "Backend Engineer (.NET)"), so each category lists several title variants.
 
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
+### Priority 1: C# / .NET backend software engineering
 
-These match your strongest and most desired career direction.
-
-```
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_2]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_COUNTRY]
-```
-
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
-
-These match your domain expertise.
+Your core skill set and the most common title family.
 
 ```
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
+site:irishjobs.ie "C# Developer" Ireland
+site:irishjobs.ie ".NET Developer" [YOUR_CITY]
+site:jobs.ie "Software Engineer" C# .NET
+site:ie.indeed.com "C# Software Engineer" Ireland
+site:linkedin.com/jobs "Senior .NET Developer" Ireland
+site:linkedin.com/jobs "Backend Engineer" C# Ireland
 ```
 
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
+### Priority 2: Business rules / decision logic
 
-Adjacent roles you could pivot into.
-
-```
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
-```
-
-### Priority 4: Broader Technical / Consulting
-
-Wider net for general technical roles.
+Roles where rules and decision logic are the core work: your domain specialism.
 
 ```
-site:[YOUR_JOB_BOARD] [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+site:irishjobs.ie "business rules" C# Ireland
+site:linkedin.com/jobs "rules engine" .NET Ireland
+site:linkedin.com/jobs "decision engine" C# Ireland
+site:ie.indeed.com "business rules" developer Ireland
+site:linkedin.com/jobs (InRule OR NRules OR "RulesEngine") Ireland
+```
+
+### Priority 3: Rules-heavy business domains (insurance, finance, payroll, compliance)
+
+.NET roles in sectors where business rules dominate the codebase (rating, underwriting, claims, lending, pricing, payroll, regulatory onboarding).
+
+```
+site:linkedin.com/jobs ".NET Developer" insurance Ireland
+site:irishjobs.ie "C#" fintech Dublin
+site:linkedin.com/jobs "C# Developer" payments OR banking Ireland
+site:irishjobs.ie ".NET" payroll OR compliance Ireland
+```
+
+### Priority 4: Broader / adjacent
+
+Wider net: full-stack .NET, Azure, or technical-lead roles.
+
+```
+site:irishjobs.ie "Full Stack" .NET Ireland
+site:linkedin.com/jobs "Azure" "C#" developer Ireland
+site:linkedin.com/jobs ".NET Tech Lead" Ireland
+site:linkedin.com/jobs "C#" remote Ireland
 ```
 
 ## Location Filter
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
+When evaluating results, check that the job is within reasonable commute distance from your home, or is remote/hybrid within Ireland. Acceptable areas:
 - [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+- Remote, Ireland-based (check that "remote" doesn't mean "remote within another country")
+- Hybrid with [N] office days/week in [ACCEPTABLE_AREA_1]
+- [BORDERLINE_AREA] (borderline, ~X min by transit/car)
+- Roles requiring relocation abroad (too far)
 
 ## Language Filter
 
